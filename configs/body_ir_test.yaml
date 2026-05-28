@@ -17,14 +17,14 @@ pages:
     content: "Rate the similarity of each sample to the reference."
     showWaveform: true
     enableLooping: true
-    reference: configs/resources/audio/test1/G#3_207_ir_reference.wav
+    reference: configs/resources/audio/test1/Gs3_207_ir_reference.wav
     createAnchor35: false
     createAnchor70: false
     randomize: true
     stimuli:
-      C1: configs/resources/audio/test1/G#3_207_ir_extracted_full.wav
-      C2: configs/resources/audio/test1/G#3_207_ir_extracted_high.wav
-      C3: configs/resources/audio/test1/G#3_207_ir_extracted_sparse.wav
+      C1: configs/resources/audio/test1/Gs3_207_ir_extracted_full.wav
+      C2: configs/resources/audio/test1/Gs3_207_ir_extracted_high.wav
+      C3: configs/resources/audio/test1/Gs3_207_ir_extracted_sparse.wav
 
   - type: mushra
     id: test2
@@ -39,7 +39,7 @@ pages:
     stimuli:
       C1: configs/resources/audio/test2/E3_164Hz_ir_extracted_full.wav
       C2: configs/resources/audio/test2/E3_164Hz_ir_extracted_high.wav
-      C3: configs/resources/audio/test2/E3_164Hz_ir_sparse.wav
+      C3: configs/resources/audio/test2/E3_164Hz_ir_extracted_sparse.wav
 
   - type: mushra
     id: test3
