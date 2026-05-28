@@ -1,0 +1,63 @@
+testname: "Audio Similarity Test"
+testId: body_ir_test
+bufferSize: 2048
+stopOnErrors: true
+showButtonPreviousPage: true
+remoteService: service/write.php
+
+pages:
+  - type: generic
+    id: intro
+    name: "Welcome"
+    content: "Welcome to this listening test. You will hear a reference audio and three test versions. Rate the similarity of each test version to the reference on a scale from 0 (very different) to 100 (identical)."
+
+  - type: mushra
+    id: test1
+    name: "Test 1"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: config/audio/test1/G#3_207_ir_reference.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: config/audio/test1/G#3_207_ir_extracted_full.wav
+      C2: config/audio/test1/G#3_207_ir_extracted_high.wav
+      C3: config/audio/test1/G#3_207_ir_extracted_sparse.wav
+
+  - type: mushra
+    id: test2
+    name: "Test 2"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: config/audio/test2/E3_164Hz_ir_reference.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: config/audio/test2/E3_164Hz_ir_extracted_full.wav
+      C2: config/audio/test2/E3_164Hz_ir_extracted_high.wav
+      C3: config/audio/test2/E3_164Hz_ir_sparse.wav
+
+  - type: mushra
+    id: test3
+    name: "Test 3"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: config/audio/test3/B4_493Hz_ir_reference.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: config/audio/test3/B4_493Hz_ir_extracted_full.wav
+      C2: config/audio/test3/B4_493Hz_ir_extracted_high.wav
+      C3: config/audio/test3/B4_493Hz_ir_extracted_sparse.wav
+
+  - type: finish
+    name: "Thank you"
+    content: "Thank you for completing the test. Your results have been saved."
+    showResults: false
+    writeResults: true
