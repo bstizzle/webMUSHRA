@@ -512,5 +512,39 @@ if ($write_spatial_lev) {
 
 }
 
+$googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyh0U6GTwIEoAE-OxGJnTsBalHRWusAvaSGSI4hcoKJq8hKRgDs8B6F8CCZmI-WPKb8/exec'; // paste your URL here
+
+$sheetsData = array();
+foreach ($session->trials as $trial) {
+  if ($trial->type == "mushra") {
+    foreach ($trial->responses as $response) {
+      $row = array(
+        'testId'    => $session->testId,
+        'uuid'      => $session->uuid,
+        'trialId'   => $trial->id,
+        'stimulus'  => $response->stimulus,
+        'score'     => $response->score,
+        'time'      => $response->time,
+        'timestamp' => date('c')
+      );
+      // add participant fields dynamically
+      for ($i = 0; $i < count($session->participant->name); $i++) {
+        $row[$session->participant->name[$i]] = $session->participant->response[$i];
+      }
+      array_push($sheetsData, $row);
+    }
+  }
+}
+
+foreach ($sheetsData as $row) {
+  $ch = curl_init($googleScriptUrl);
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($row));
+  curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+  curl_exec($ch);
+  curl_close($ch);
+}
 
 ?>
