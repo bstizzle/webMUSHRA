@@ -83,7 +83,7 @@ pages:
     randomize: true
     stimuli:
       C1: configs/resources/audio/test3/F3_174Hz_ir_extracted_full.wav
-      C2: configs/resources/audio/test3/F3_174Hz_ir_extracted_low.wav
+      C2: configs/resources/audio/test3/F3_174Hz_ir_extracted_high.wav
       C3: configs/resources/audio/test3/F3_174Hz_ir_extracted_sparse.wav
 
   - type: finish
