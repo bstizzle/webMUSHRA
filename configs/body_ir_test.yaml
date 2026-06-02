@@ -56,6 +56,36 @@ pages:
       C2: configs/resources/audio/test3/B4_493Hz_ir_extracted_high.wav
       C3: configs/resources/audio/test3/B4_493Hz_ir_extracted_sparse.wav
 
+  - type: mushra
+    id: test4
+    name: "Test 4"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: configs/resources/audio/test3/C3_130Hz_ir_reference.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: configs/resources/audio/test3/C3_130Hz_ir_extracted_full.wav
+      C2: configs/resources/audio/test3/C3_130Hz_ir_extracted_low.wav
+      C3: configs/resources/audio/test3/C3_130Hz_ir_extracted_sparse.wav
+
+  - type: mushra
+    id: test5
+    name: "Test 5"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: configs/resources/audio/test3/F3_174Hz_ir_reference.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: configs/resources/audio/test3/F3_174Hz_ir_extracted_full.wav
+      C2: configs/resources/audio/test3/F3_174Hz_ir_extracted_low.wav
+      C3: configs/resources/audio/test3/F3_174Hz_ir_extracted_sparse.wav
+
   - type: finish
     name: "Thank you"
     content: "Thank you for completing the test. Your results have been saved."
