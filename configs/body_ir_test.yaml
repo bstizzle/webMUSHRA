@@ -106,7 +106,7 @@ pages:
     content: "Rate the similarity of each sample to the reference."
     showWaveform: true
     enableLooping: true
-    reference: configs/resources/audio/test7/FORMIX_5.wav
+    reference: configs/resources/audio/test7/FORMIX_3.wav
     createAnchor35: false
     createAnchor70: false
     randomize: true
