@@ -116,6 +116,6 @@ pages:
 
   - type: finish
     name: "Thank you"
-    content: "Thank you for completing the test. Your results have been saved."
+    content: "Thank you for completing the test. Please press the 'Send Results' button and wait for the 'Thank you for your participation!' popup to appear."
     showResults: false
     writeResults: true
