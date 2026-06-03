@@ -130,8 +130,8 @@ pages:
       C3: configs/resources/audio/test8/G3_196Hz_ir_extracted_sparse.wav
 
   - type: mushra
-    id: test8
-    name: "Test 8"
+    id: test9
+    name: "Test 9"
     content: "Rate the similarity of each sample to the reference."
     showWaveform: true
     enableLooping: true
