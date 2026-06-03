@@ -120,7 +120,7 @@ pages:
     content: "Rate the similarity of each sample to the reference."
     showWaveform: true
     enableLooping: true
-    reference: configs/resources/audio/test8/G3_196Hz_ir_reference.wav
+    reference: configs/resources/audio/test8/FORMIX_5.wav
     createAnchor35: false
     createAnchor70: false
     randomize: true
@@ -128,6 +128,21 @@ pages:
       C1: configs/resources/audio/test8/G3_196Hz_ir_extracted_full.wav
       C2: configs/resources/audio/test8/G3_196Hz_ir_extracted_low.wav
       C3: configs/resources/audio/test8/G3_196Hz_ir_extracted_sparse.wav
+
+  - type: mushra
+    id: test8
+    name: "Test 8"
+    content: "Rate the similarity of each sample to the reference."
+    showWaveform: true
+    enableLooping: true
+    reference: configs/resources/audio/test9/HERMES_6.wav
+    createAnchor35: false
+    createAnchor70: false
+    randomize: true
+    stimuli:
+      C1: configs/resources/audio/test9/A3_220Hz_ir_extracted_full.wav
+      C2: configs/resources/audio/test9/A3_220Hz_ir_extracted_low.wav
+      C3: configs/resources/audio/test9/A3_220Hz_ir_extracted_sparse.wav
 
   - type: finish
     name: "Thank you"
